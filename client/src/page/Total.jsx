@@ -1,4 +1,4 @@
-import axios from "axios"
+
 import { useEffect, useState } from "react"
 
 
@@ -19,7 +19,7 @@ const Total = () => {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await fetch('https://acs-coc-api.wachawich.repl.co/api');
+            const response = await fetch('https://acs-coc-api.wachawich.repl.co/api/totalscore');
             const data = await response.json();
             setApiData(data);
           } catch (error) {
