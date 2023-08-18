@@ -8,23 +8,55 @@ app.use(cors());
 const products = [
     {
         id: '1',
-        coc_data:[
+        coc_data: [
             {
-
+                match_id: "1",
+                match_data : []
+            },
+            {
+                match_id: "2",
+                match_data : []
             }
         ]
     },
     {
         id: '2',
-        coc_data:[]
+        coc_data: [
+            {
+                match_id: "1",
+                match_data : []
+            },
+            {
+                match_id: "2",
+                match_data : []
+            }
+        ]
     },
     {
         id: '3',
-        coc_data:[]
+        coc_data: [
+            {
+                match_id: "1",
+                match_data : []
+            },
+            {
+                match_id: "2",
+                match_data : []
+            }
+        ]
     },
     {
         id: '4',
-        coc_data:[]
+        coc_data: [
+            {
+                match_id: "1",
+                match_data : []
+            },
+            {
+                match_id: "2",
+                match_data : []
+            }
+        ]
     }
 ]
 
@@ -36,6 +68,13 @@ app.get('/cocData/:id', (req, res) => {
     const { id } = req.params;
     const result = products.find((product) => product.id === id);
     res.json(result);
+});
+
+app.get('/cocData/:id/:match_id', (req, res) => {
+    const { id, match_id } = req.params;
+    const result = products.find((product) => product.id === id);
+    const result2 = result.coc_data.find((product) => product.match_id === match_id);
+    res.json(result2);
 });
 
 

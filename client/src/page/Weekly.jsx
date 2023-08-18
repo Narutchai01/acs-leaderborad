@@ -8,7 +8,7 @@ const Weekly = () => {
 
     useEffect(() => {
         const GetApi = () => {
-            axios.get('https://acs-api.onrender.com/products')
+            axios.get('https://acs-api-coc.onrender.com/cocData')
                 .then((response) => {
                     setData(response.data)
                 })
@@ -19,13 +19,17 @@ const Weekly = () => {
         GetApi()
     }, [])
 
-    console.log(data);
+    // console.log(data);
 
+    const getData = data.forEach((item) => {
+        return <h1>{item.id}</h1>
+    });
     
     
     return (
         <>
-            
+        <h1>Weekly</h1>
+        {getData}
         </>
     )
 }
