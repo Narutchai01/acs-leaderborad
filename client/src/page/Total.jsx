@@ -6,15 +6,6 @@ const Total = () => {
 
     const [apiData, setApiData] = useState([]);
 
-    // const GetApi = () => {
-    //     axios.get('https://acs-coc-api.wachawich.repl.co/api/totolscore')
-    //         .then((response) => {
-    //             setScoreData(response.data.day1)
-    //         })
-    //         .catch((error) => {
-    //             console.log(error)
-    //         })
-    // }
 
     useEffect(() => {
         const fetchData = async () => {
