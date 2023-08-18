@@ -1,9 +1,10 @@
 import axios from "axios"
-
 import { useEffect, useState } from "react"
+
+
 const Total = () => {
 
-    const [ScoreData, setScoreData] = useState([]);
+    const [apiData, setApiData] = useState([]);
 
     // const GetApi = () => {
     //     axios.get('https://acs-coc-api.wachawich.repl.co/api/totolscore')
@@ -16,38 +17,38 @@ const Total = () => {
     // }
 
     useEffect(() => {
-        const GetApi = () => {
-            axios.get('https://acs-coc-api.wachawich.repl.co/api/totolscore')
-                .then((response) => {
-                    setScoreData(response.data)
-                })
-                .catch((error) => {
-                    console.log(error)
-                })
-        }
-        GetApi()
-    }, [])
+        const fetchData = async () => {
+          try {
+            const response = await fetch('https://acs-coc-api.wachawich.repl.co/api');
+            const data = await response.json();
+            setApiData(data);
+          } catch (error) {
+            console.error('Error fetching API data:', error);
+          }
+        };
+    
+        fetchData();
+      }, []);
 
     const combineScoresById = () => {
         const combinedScores = {};
 
-        ScoreData.forEach(dayData => {
-            for (const dayKey in dayData) {
-                const matches = dayData[dayKey];
-                for (const match of matches) {
-                    for (const player of match.player) {
-                        const playerId = player.id;
-                        if (!combinedScores[playerId]) {
-                            combinedScores[playerId] = {
-                                codingamerNickname: player.codingamerNickname,
-                                totalScore: 0,
-                            };
-                        }
-                        combinedScores[playerId].totalScore += player.score;
-                    }
-                }
-            }
-        });
+        apiData.forEach(user => {
+            user.coc_data.forEach(coc => {
+              coc.match_data.forEach(match => {
+                match.player.forEach(player => {
+                  const playerId = player.id;
+                  if (!combinedScores[playerId]) {
+                    combinedScores[playerId] = {
+                      nickname: player.codingamerNickname,
+                      totalScore: 0,
+                    };
+                  }
+                  combinedScores[playerId].totalScore += player.score;
+                });
+              });
+            });
+          });
 
         const combinedScoresArray = Object.values(combinedScores);
 
@@ -75,9 +76,9 @@ const Total = () => {
                         </thead>
                         <tbody>
                             {combinedScoresArray.map((player, index) => (
-                                <tr key={player.codingamerNickname} className="text-2xl">
+                                <tr key={player.nickname} className="text-2xl">
                                     <td>{index + 1}</td>
-                                    <td>{player.codingamerNickname}</td>
+                                    <td>{player.nickname}</td>
                                     <td>{player.totalScore}</td>
                                 </tr>
                             ))}
