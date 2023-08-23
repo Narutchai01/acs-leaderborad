@@ -1,91 +1,67 @@
-import axios from "axios"
-
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 const Total = () => {
 
-    const [ScoreData, setScoreData] = useState([]);
+    const [data, setData] = useState([]);
+    let Overall = {};
 
-    // const GetApi = () => {
-    //     axios.get('https://acs-coc-api.wachawich.repl.co/api/totolscore')
-    //         .then((response) => {
-    //             setScoreData(response.data.day1)
-    //         })
-    //         .catch((error) => {
-    //             console.log(error)
-    //         })
-    // }
-
-    useEffect(() => {
-        const GetApi = () => {
-            axios.get('https://acs-coc-api.wachawich.repl.co/api/totolscore')
-                .then((response) => {
-                    setScoreData(response.data)
-                })
-                .catch((error) => {
-                    console.log(error)
-                })
-        }
-        GetApi()
-    }, [])
-
-    const combineScoresById = () => {
-        const combinedScores = {};
-
-        ScoreData.forEach(dayData => {
-            for (const dayKey in dayData) {
-                const matches = dayData[dayKey];
-                for (const match of matches) {
-                    for (const player of match.player) {
-                        const playerId = player.id;
-                        if (!combinedScores[playerId]) {
-                            combinedScores[playerId] = {
-                                codingamerNickname: player.codingamerNickname,
-                                totalScore: 0,
-                            };
-                        }
-                        combinedScores[playerId].totalScore += player.score;
-                    }
-                }
-            }
-        });
-
-        const combinedScoresArray = Object.values(combinedScores);
-
-        // เรียงลำดับตามคะแนนที่มากที่สุด
-        combinedScoresArray.sort((a, b) => b.totalScore - a.totalScore);
-        return combinedScoresArray;
+    const getData = async () => {
+        const res = await fetch("http://localhost:3000/cocdata");
+        const data = await res.json();
+        setData(data);
     };
+    // console.log(data);
 
-    const combinedScoresArray = combineScoresById();
 
+    data?.forEach(coc => {
+        coc.coc_data?.forEach(match => {
+            match.match_data.forEach(dataMatch => {
+                dataMatch?.players.forEach(player => {
+                    const playId = player.codingamerId;
+                    const score = 100 - (player.rank - 1) * 100 / dataMatch.players.length;
+                    if (!Overall[playId]) {
+                        Overall[playId] = {
+                            rank: player.rank,
+                            name: player.codingamerNickname,
+                            score: score,
+                        };
+                    Overall[playId].score += Overall[playId].score;
+                    }
+                })
+            })
+        })
+    })
+    Overall = Object.values(Overall).sort((a, b) => b.score - a.score);
 
+    const showOverall = Overall?.map((player) => {
+        return (
+            <tr key={player.codingamerId}>
+                <td>{player.rank}</td>
+                <td>{player.name}</td>
+                <td>{player.score}</td>
+            </tr>
+        )
+    });
+    useEffect(() => {
+        getData();
+    }, []);
 
     return (
         <>
-            <h1 className="text-center text-6xl font-bold">Overall</h1>
-            <div className="mt-10 container mx-auto px-4 h-screen">
-                <div className="flex justify-center pt-6 h-80">
-                    <table className="text-center w-full">
-                        <thead>
-                            <tr className=" text-3xl">
-                                <th>Rank</th>
-                                <th>Player</th>
-                                <th>Score</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {combinedScoresArray.map((player, index) => (
-                                <tr key={player.codingamerNickname} className="text-2xl">
-                                    <td>{index + 1}</td>
-                                    <td>{player.codingamerNickname}</td>
-                                    <td>{player.totalScore}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                </div>
+        <h1 className="font-bold my-10 text-center uppercase text-6xl">acs competition</h1>
+            <div className="flex justify-center">
+                <table className="w-[960px] text-center">
+                    <thead className="text-[30px]">
+                        <tr>
+                            <th className="">Rank</th>
+                            <th>Name</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody className="text-[23px]">
+                        {showOverall}
+                    </tbody>
+                </table>
             </div>
-
         </>
     );
 };
