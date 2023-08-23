@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
 import NavScore from "../components/NavScore";
 
 
@@ -68,20 +68,24 @@ const Weekly = () => {
 
             <div className="container mx-auto px-36">
                 <NavScore />
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Rank</th>
-                            <th>Player</th>
-                            <th>Round 1</th>
-                            <th>Round 2</th>
-                            <th>Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {ShowTop10}
-                    </tbody>
-                </table>
+                <div className="flex justify-center w-75 bg-black px-5 py-5 rounded-3xl bg-opacity-[20%]">
+                    <div className="rounded-3xl w-full h-auto py-5 bg-[#291456]">
+                        <table className="text-center w-full bg-black">
+                            <thead className="text-[30px] bg-[#291456] text-white">
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Name</th>
+                                    <th>Round 1</th>
+                                    <th>Round 2</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody className="text-[23px] text-center text-white [&>*:nth-child(2n)]:bg-[#291456] [&>*:nth-child(2n+1)]:bg-[#35246A]">
+                                {ShowTop10}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </>
     )
