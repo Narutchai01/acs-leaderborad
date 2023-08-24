@@ -12,13 +12,13 @@ const Roundpage = () => {
 
 
     const getMatch1 = async (dateId) => {
-        const res = await fetch(`http://localhost:3000/cocdata/${dateId}/1/data_match`);
+        const res = await fetch(`https://acs-api-coc.onrender.com/cocdata/${dateId}/1/data_match`);
         const data = await res.json();
         setMatch1(data);
     }
 
     const getMatch2 = async (dateId) => {
-        const res = await fetch(`http://localhost:3000/cocdata/${dateId}/2/data_match`);
+        const res = await fetch(`https://acs-api-coc.onrender.com/cocdata/${dateId}/2/data_match`);
         const data = await res.json();
         setMatch2(data);
     }

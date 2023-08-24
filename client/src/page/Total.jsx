@@ -6,7 +6,7 @@ const Total = () => {
     let Overall = {};
 
     const getData = async () => {
-        const res = await fetch("http://localhost:3000/cocdata");
+        const res = await fetch("https://acs-api-coc.onrender.com/cocdata");
         const data = await res.json();
         setData(data);
     };

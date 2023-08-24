@@ -13,7 +13,7 @@ const Weekly = () => {
 
 
     const getDataMatch = async (dateId) => {
-        const res = await fetch(`http://localhost:3000/cocdata/${dateId}`);
+        const res = await fetch(`https://acs-api-coc.onrender.com/cocdata/${dateId}`);
         const data = await res.json();
         setDataMatch(data);
     }
