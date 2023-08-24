@@ -7,7 +7,7 @@ const NavScore = () => {
     const [weeks, setWeeks] = useState();
 
     const getWeeks = async () => {
-        const response = await fetch("http://localhost:3000/cocdata");
+        const response = await fetch("https://acs-api-coc.onrender.com/cocdata");
         const data = await response.json();
         setWeeks(data);
     }
