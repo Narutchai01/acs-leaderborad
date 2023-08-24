@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import NavScore from "../components/NavScore";
+=======
+import { Link } from "react-router-dom";
+>>>>>>> main
 
 
 const Weekly = () => {
@@ -10,6 +14,7 @@ const Weekly = () => {
     // let round2 = {}
     let top10 = { rank: 0, name: '', score1: 0, score2: 0, total: 0 }
 
+<<<<<<< HEAD
 
 
     const getDataMatch = async (dateId) => {
@@ -90,6 +95,23 @@ const Weekly = () => {
                 </div>
             </div>
         </>
+=======
+    return (
+        <div className="container">
+            <Link to="/weekly/1" target="_parent" rel="noopener noreferrer">
+                <button id='x'>weekly 1</button>
+            </Link>
+            <Link to="/weekly/2" target="_parent" rel="noopener noreferrer">
+                <button id='xx'>weekly 2</button>
+            </Link>
+            <Link to="/weekly/3" target="_parent" rel="noopener noreferrer">
+                <button id='xxx'>weekly 3</button>
+            </Link>
+            <Link to="/weekly/4" target="_parent" rel="noopener noreferrer">
+                <button id='xxxx'>weekly 4</button>
+            </Link>
+        </div>
+>>>>>>> main
     )
 }
 
