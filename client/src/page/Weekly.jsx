@@ -48,7 +48,7 @@ const Weekly = () => {
 
     const ShowTop10 = top10?.map((player) => {
         return (
-            <tr key={player.codingamerId}>
+            <tr key={player.codingamerId} >
                 <td>{player.rank}</td>
                 <td>{player.name}</td>
                 <td>{player.score1}</td>
@@ -67,23 +67,25 @@ const Weekly = () => {
         <>
 
             <div className="container mx-auto px-36">
-                <NavScore />
-                <div className="flex justify-center w-75 bg-black px-5 py-5 rounded-3xl bg-opacity-[20%]">
-                    <div className="rounded-3xl w-full h-auto py-5 bg-[#291456]">
-                        <table className="text-center w-full bg-black">
-                            <thead className="text-[30px] bg-[#291456] text-white">
-                                <tr>
-                                    <th>Rank</th>
-                                    <th>Name</th>
-                                    <th>Round 1</th>
-                                    <th>Round 2</th>
-                                    <th>Total</th>
-                                </tr>
-                            </thead>
-                            <tbody className="text-[23px] text-center text-white [&>*:nth-child(2n)]:bg-[#291456] [&>*:nth-child(2n+1)]:bg-[#35246A]">
-                                {ShowTop10}
-                            </tbody>
-                        </table>
+                <div className="bg-black px-5 py-5 rounded-3xl bg-opacity-[20%]">
+                    <NavScore />
+                    <div className="flex justify-center w-75 mt-5">
+                        <div className="rounded-3xl w-full h-[500px] py-5 bg-[#291456]">
+                            <table className="text-center w-full h-full bg-black">
+                                <thead className="text-[30px] bg-[#291456] text-white">
+                                    <tr>
+                                        <th>Rank</th>
+                                        <th>Name</th>
+                                        <th>Round 1</th>
+                                        <th>Round 2</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="text-[20px] text-center text-white [&>*:nth-child(2n)]:bg-[#291456] [&>*:nth-child(2n+1)]:bg-[#35246A]">
+                                    {ShowTop10}
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

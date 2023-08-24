@@ -58,32 +58,38 @@ const Roundpage = () => {
     return (
         <>
             <div className='container mx-auto px-36'>
-                <NavScore />
-                <div className='flex flex-row gap-52'>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Rank</th>
-                                <th>Name</th>
-                                <th>Score</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {Showmatch1}
-                        </tbody>
-                    </table>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Rank</th>
-                                <th>Name</th>
-                                <th>Score</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {Showmatch2}
-                        </tbody>
-                    </table>
+                <div className='mt-12 bg-black p-7 bg-opacity-[20%] rounded-3xl'>
+                    <NavScore />
+                    <div className='grid grid-cols-2 gap-[30px] justify-center h-[400px] mt-10'>
+                        <div className='bg-[#291456] text-white w-full h-auto py-3 rounded-2xl'>
+                            <table className='w-full h-full'>
+                                <thead>
+                                    <tr>
+                                        <th>Rank</th>
+                                        <th>Name</th>
+                                        <th>Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody className='text-center text-[20px] [&>*:nth-child(2n)]:bg-[#291456] [&>*:nth-child(2n+1)]:bg-[#35246A] '>
+                                    {Showmatch1}
+                                </tbody>
+                            </table>
+                        </div>
+                        <div className='bg-[#291456] text-white w-full h-auto py-3 rounded-2xl'>
+                            <table className='w-full h-full'>
+                                <thead>
+                                    <tr>
+                                        <th>Rank</th>
+                                        <th>Name</th>
+                                        <th>Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody className='text-center text-[20px] [&>*:nth-child(2n)]:bg-[#291456] [&>*:nth-child(2n+1)]:bg-[#35246A] '>
+                                    {Showmatch2}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </>
