@@ -19,7 +19,7 @@ const NavScore = () => {
     const getWeek = weeks?.map((week) => {
         return (
             <button key={week.id}   >
-                <NavLink className={`${dateId === week.id ? 'px-4 py-2 bg-[#FF3D00] rounded-lg font-bold text-white' : 'px-4 py-2 bg-white rounded-lg bg-opacity-30 font-bold text-white'}`} to={`/weekly/${week.id}`}>{week.id}</NavLink>
+                <NavLink className={`${dateId === week.id ? 'px-4 py-2 bg-[#8ADBF0] rounded-lg font-bold text-white' : 'px-4 py-2 bg-white rounded-lg bg-opacity-30 font-bold text-white'}`} to={`/weekly/${week.id}`}>{week.id}</NavLink>
             </button>
         )
     })

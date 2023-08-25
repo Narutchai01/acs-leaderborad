@@ -58,7 +58,7 @@ const Roundpage = () => {
     return (
         <>
             <div className='container mx-auto px-36'>
-                <div className='mt-12 bg-black p-7 bg-opacity-[20%] rounded-3xl'>
+                <div className='bg-black px-5 py-5 rounded-3xl bg-opacity-[20%]'>
                     <NavScore />
                     <div className='grid grid-cols-2 gap-[30px] justify-center h-[400px] mt-10'>
                         <div className='bg-[#291456] text-white w-full h-auto py-3 rounded-2xl'>
