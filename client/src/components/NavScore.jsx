@@ -1,4 +1,4 @@
-import { useParams,Link } from "react-router-dom"
+import { useParams, NavLink ,Link} from "react-router-dom"
 import { useState, useEffect } from "react";
 
 
@@ -18,9 +18,9 @@ const NavScore = () => {
 
     const getWeek = weeks?.map((week) => {
         return (
-            <h1 key={week.id} className="px-4 py-2 bg-white rounded-lg bg-opacity-30 font-bold text-white">
-                <Link to={`/weekly/${week.id}`}>{week.id}</Link>
-            </h1>
+            <button key={week.id}   >
+                <NavLink className={`${dateId === week.id ? 'px-4 py-2 bg-[#FF3D00] rounded-lg font-bold text-white' : 'px-4 py-2 bg-white rounded-lg bg-opacity-30 font-bold text-white'}`} to={`/weekly/${week.id}`}>{week.id}</NavLink>
+            </button>
         )
     })
 
