@@ -23,10 +23,10 @@ const Total = () => {
                         Overall[playId] = {
                             rank: player.rank,
                             name: player.codingamerNickname,
-                            score: score,
+                            score: 0,
                         };
-                        Overall[playId].score += Overall[playId].score;
                     }
+                    Overall[playId].score += score;
                 })
             })
         })
