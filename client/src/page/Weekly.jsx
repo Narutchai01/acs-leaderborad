@@ -48,7 +48,7 @@ const Weekly = () => {
                     )
                 }
                 parseInt(
-                    top10[playerId].total = top10[playerId].score1 + top10[playerId].score2
+                    top10[playerId].total = parseInt(top10[playerId].score1) + parseInt(top10[playerId].score2) + parseInt(top10[playerId].score3)
                 )
             })
         })
