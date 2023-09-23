@@ -51,7 +51,7 @@ const Roundpage = () => {
             <tr key={player.codingamerId}>
                 <td>{player.rank}</td>
                 <td>{player.codingamerNickname}</td>
-                <td>{score}</td>
+                <td>{parseInt(score)}</td>
             </tr>
         )
     })
