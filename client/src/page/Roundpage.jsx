@@ -100,7 +100,7 @@ const Roundpage = () => {
                             </table>
                         </div>
 
-                        <h1 className='text-white font-bold text-3xl'>Round 1</h1>
+                        <h1 className='text-white font-bold text-3xl'>Round 2</h1>
                         <div className='bg-[#291456] text-white w-full h-auto py-3 rounded-2xl'>
                             <table className='w-full h-full'>
                                 <thead>
@@ -118,7 +118,7 @@ const Roundpage = () => {
 
                         
                         
-                        <h1 className='text-white font-bold text-3xl'>Round 1</h1>
+                        <h1 className='text-white font-bold text-3xl'>Round 3</h1>
                         <div className='bg-[#291456] text-white w-full h-auto py-3 rounded-2xl'>
                             <table className='w-full h-full'>
                                 <thead>
