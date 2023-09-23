@@ -8,7 +8,7 @@ const Weekly = () => {
     const [dataMatch, setDataMatch] = useState([]);
     // let round1 = {}
     // let round2 = {}
-    let top10 = { rank: 0, name: '', score1: 0, score2: 0,score3:0, total: 0 }
+    let top10 = { rank: 0, name: '', score1: 0, score2: 0, score3: 0, total: 0 }
 
 
 
@@ -33,15 +33,23 @@ const Weekly = () => {
                     }
                 }
                 if (coc.match_id === "1") {
-                    top10[playerId].score1 = 100 - (player.rank - 1) * 100 / match.players.length
+                    parseInt(
+                        top10[playerId].score1 = 100 - (player.rank - 1) * 100 / match.players.length
+                    )
                 }
                 if (coc.match_id === "2") {
-                    top10[playerId].score2 = 100 - (player.rank - 1) * 100 / match.players.length
+                    parseInt(
+                        top10[playerId].score2 = 100 - (player.rank - 1) * 100 / match.players.length
+                    )
                 }
                 if (coc.match_id === "3") {
-                    top10[playerId].score3 = 100 - (player.rank - 1) * 100 / match.players.length
+                    parseInt(
+                        top10[playerId].score3 = 100 - (player.rank - 1) * 100 / match.players.length
+                    )
                 }
-                top10[playerId].total = top10[playerId].score1 + top10[playerId].score2
+                parseInt(
+                    top10[playerId].total = top10[playerId].score1 + top10[playerId].score2
+                )
             })
         })
     })
