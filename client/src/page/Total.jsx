@@ -26,7 +26,7 @@ const Total = () => {
                             score: 0,
                         };
                     }
-                    Overall[playId].score += score;
+                    Overall[playId].score += parseInt(score);
                 })
             })
         })
