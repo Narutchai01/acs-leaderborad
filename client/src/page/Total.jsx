@@ -38,7 +38,7 @@ const Total = () => {
             <tr key={player.codingamerId} className="">
                 <td>{index+1}</td>
                 <td className="text-left">{player.name}</td>
-                <td>{player.score}</td>
+                <td>{parseInt(player.score)}</td>
             </tr>
         )
     });

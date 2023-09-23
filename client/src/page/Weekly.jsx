@@ -55,9 +55,9 @@ const Weekly = () => {
             <tr key={player.codingamerId} >
                 <td>{player.rank}</td>
                 <td>{player.name}</td>
-                <td>{player.score1}</td>
-                <td>{player.score2}</td>
-                <td>{player.score3}</td>
+                <td>{parseInt(player.score1)}</td>
+                <td>{parseInt(player.score2)}</td>
+                <td>{parseInt(player.score3)}</td>
                 <td>{player.total}</td>
             </tr>
         )
