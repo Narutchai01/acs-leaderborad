@@ -26,7 +26,7 @@ const Roundpage = () => {
     }
 
     const getMatch3 = async (dateId) => {
-        const res = await fetch(`https://acs-api-coc.onrender.com/cocdata/${dateId}/2/data_match`);
+        const res = await fetch(`https://acs-api-coc.onrender.com/cocdata/${dateId}/3/data_match`);
         const data = await res.json();
         setMatch3(data);
     };
