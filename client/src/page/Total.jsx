@@ -33,10 +33,10 @@ const Total = () => {
     })
     Overall = Object.values(Overall).sort((a, b) => b.score - a.score);
 
-    const showOverall = Overall?.map((player) => {
+    const showOverall = Overall?.map((player,index) => {
         return (
             <tr key={player.codingamerId} className="">
-                <td>{player.rank}</td>
+                <td>{index+1}</td>
                 <td className="text-left">{player.name}</td>
                 <td>{player.score}</td>
             </tr>
