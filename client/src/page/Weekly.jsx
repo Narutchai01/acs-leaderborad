@@ -58,10 +58,10 @@ const Weekly = () => {
 
     console.log(top10);
 
-    const ShowTop10 = top10?.map((player) => {
+    const ShowTop10 = top10?.map((player,index) => {
         return (
             <tr key={player.codingamerId} >
-                <td>{player.rank}</td>
+                <td>{index+1}</td>
                 <td>{player.name}</td>
                 <td>{parseInt(player.score1)}</td>
                 <td>{parseInt(player.score2)}</td>
