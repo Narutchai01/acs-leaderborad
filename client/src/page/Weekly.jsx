@@ -8,7 +8,7 @@ const Weekly = () => {
     const [dataMatch, setDataMatch] = useState([]);
     // let round1 = {}
     // let round2 = {}
-    let top10 = { rank: 0, name: '', score1: 0, score2: 0, total: 0 }
+    let top10 = { rank: 0, name: '', score1: 0, score2: 0,score3:0, total: 0 }
 
 
 
@@ -28,6 +28,7 @@ const Weekly = () => {
                         name: player.codingamerNickname,
                         score1: 0,
                         score2: 0,
+                        score3: 0,
                         total: 0
                     }
                 }
@@ -36,6 +37,9 @@ const Weekly = () => {
                 }
                 if (coc.match_id === "2") {
                     top10[playerId].score2 = 100 - (player.rank - 1) * 100 / match.players.length
+                }
+                if (coc.match_id === "3") {
+                    top10[playerId].score3 = 100 - (player.rank - 1) * 100 / match.players.length
                 }
                 top10[playerId].total = top10[playerId].score1 + top10[playerId].score2
             })
@@ -53,6 +57,7 @@ const Weekly = () => {
                 <td>{player.name}</td>
                 <td>{player.score1}</td>
                 <td>{player.score2}</td>
+                <td>{player.score3}</td>
                 <td>{player.total}</td>
             </tr>
         )
@@ -78,6 +83,7 @@ const Weekly = () => {
                                         <th>Name</th>
                                         <th>Round 1</th>
                                         <th>Round 2</th>
+                                        <th>Round 3</th>
                                         <th>Total</th>
                                     </tr>
                                 </thead>
