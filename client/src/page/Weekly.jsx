@@ -58,7 +58,7 @@ const Weekly = () => {
                 <td>{parseInt(player.score1)}</td>
                 <td>{parseInt(player.score2)}</td>
                 <td>{parseInt(player.score3)}</td>
-                <td>{player.total}</td>
+                <td>{parseInt(player.total)}</td>
             </tr>
         )
     })
