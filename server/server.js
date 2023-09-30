@@ -1482,11 +1482,449 @@ const products = [
             {
                 match_id: "1",
                 match_data: [
-
+                    {
+                        "nbPlayersMin": 2,
+                        "nbPlayersMax": 100,
+                        "publicHandle": "3299263afb0079438b378d9b5d03ff6b3b8494b",
+                        "clashDurationTypeId": "SHORT",
+                        "mode": "FASTEST",
+                        "creationTime": "Sep 30, 2023, 1:35:01 PM",
+                        "startTime": "Sep 30, 2023, 1:40:01 PM",
+                        "endTime": "Sep 30, 2023, 1:55:01 PM",
+                        "startTimestamp": 1696081201708,
+                        "msBeforeStart": -961131,
+                        "msBeforeEnd": -61131,
+                        "finished": true,
+                        "started": true,
+                        "publicClash": false,
+                        "players": [
+                            {
+                                "codingamerId": 4761280,
+                                "codingamerNickname": "Jack_Jessada",
+                                "codingamerHandle": "97cbc51741f3f5e1f9cc3fd072e73f1a0821674",
+                                "score": 100,
+                                "duration": 69093,
+                                "status": "STANDARD",
+                                "testSessionStatus": "COMPLETED",
+                                "languageId": "Python3",
+                                "rank": 1,
+                                "position": 3,
+                                "solutionShared": true,
+                                "testSessionHandle": "626909780e8ec5b83dc21850415b1a7a2eeee44b",
+                                "submissionId": 31988473
+                            },
+                            {
+                                "codingamerId": 4388154,
+                                "codingamerNickname": "Dpresser",
+                                "codingamerHandle": "7a17124f861f4b3029008d3fc7f35eba4518834",
+                                "codingamerAvatarId": 93224004508751,
+                                "score": 100,
+                                "duration": 83396,
+                                "status": "STANDARD",
+                                "testSessionStatus": "COMPLETED",
+                                "languageId": "Python3",
+                                "rank": 2,
+                                "position": 5,
+                                "solutionShared": true,
+                                "testSessionHandle": "626909801b44c9507eb4b397a10f7ea308a083a5",
+                                "submissionId": 31988476
+                            },
+                            {
+                                "codingamerId": 5673693,
+                                "codingamerNickname": "BooIsBoo",
+                                "codingamerHandle": "5b0c358b4217a86ec74d33460692d2d13963765",
+                                "score": 100,
+                                "duration": 100751,
+                                "status": "STANDARD",
+                                "testSessionStatus": "COMPLETED",
+                                "languageId": "Python3",
+                                "rank": 3,
+                                "position": 16,
+                                "solutionShared": true,
+                                "testSessionHandle": "626909910d815fa456b4c539fd1356b9ef61707e",
+                                "submissionId": 31988482
+                            },
+                            {
+                                "codingamerId": 5673662,
+                                "codingamerNickname": "Mayoi",
+                                "codingamerHandle": "5a8d9d884aa3dc866f26a5b6dc2846662663765",
+                                "codingamerAvatarId": 110499764513563,
+                                "score": 100,
+                                "duration": 183520,
+                                "status": "STANDARD",
+                                "testSessionStatus": "COMPLETED",
+                                "languageId": "Python3",
+                                "rank": 4,
+                                "position": 17,
+                                "solutionShared": true,
+                                "testSessionHandle": "62690992d1c123e0527570ffeccbfdc2ea374899",
+                                "submissionId": 31988499
+                            },
+                            {
+                                "codingamerId": 4612183,
+                                "codingamerNickname": "HE4RT",
+                                "codingamerHandle": "2381e85449bdff1693251eb7c264625a3812164",
+                                "codingamerAvatarId": 73611224462280,
+                                "score": 100,
+                                "duration": 285851,
+                                "status": "STANDARD",
+                                "testSessionStatus": "COMPLETED",
+                                "languageId": "Python3",
+                                "rank": 5,
+                                "position": 14,
+                                "solutionShared": true,
+                                "testSessionHandle": "62690989404e1df31f9c3888172d67e55d60c3b7",
+                                "submissionId": 31988513
+                            },
+                            {
+                                "codingamerId": 5673671,
+                                "codingamerNickname": "poppop11",
+                                "codingamerHandle": "ccddd109e93851f9f1df7fbff00f1f361763765",
+                                "score": 100,
+                                "duration": 289092,
+                                "status": "STANDARD",
+                                "testSessionStatus": "COMPLETED",
+                                "languageId": "Python3",
+                                "rank": 6,
+                                "position": 21,
+                                "solutionShared": true,
+                                "testSessionHandle": "626909963eb33ca735a5a07e4ca848af1e62bef9",
+                                "submissionId": 31988515
+                            },
+                            {
+                                "codingamerId": 5724275,
+                                "codingamerNickname": "Duckkrub",
+                                "codingamerHandle": "85f9826fb6181556156550603b42a6cc5724275",
+                                "score": 100,
+                                "duration": 313009,
+                                "status": "STANDARD",
+                                "testSessionStatus": "COMPLETED",
+                                "languageId": "C",
+                                "rank": 7,
+                                "position": 9,
+                                "solutionShared": true,
+                                "testSessionHandle": "62690984d2aca160679e8de82cae7ac1e458ba63",
+                                "submissionId": 31988520
+                            },
+                            {
+                                "codingamerId": 4529556,
+                                "codingamerNickname": "Saete373",
+                                "codingamerHandle": "0f9d477d5e952856495d5f0e827229dd6559254",
+                                "codingamerAvatarId": 110503803225744,
+                                "score": 100,
+                                "duration": 347005,
+                                "status": "STANDARD",
+                                "testSessionStatus": "COMPLETED",
+                                "languageId": "Python3",
+                                "rank": 8,
+                                "position": 19,
+                                "solutionShared": true,
+                                "testSessionHandle": "62690994dcc419d5388da049f5a44eb7caaf0b8f",
+                                "submissionId": 31988525
+                            },
+                            {
+                                "codingamerId": 4385417,
+                                "codingamerNickname": "Riwara",
+                                "codingamerHandle": "4c5db8cd95e4e55b4a0abca3c25e97bf7145834",
+                                "codingamerAvatarId": 66348567827423,
+                                "score": 100,
+                                "duration": 394643,
+                                "status": "STANDARD",
+                                "testSessionStatus": "COMPLETED",
+                                "languageId": "Python3",
+                                "rank": 9,
+                                "position": 8,
+                                "solutionShared": true,
+                                "testSessionHandle": "626909833327cefae2491ac4b7ca149a4cbd1bb2",
+                                "submissionId": 31988531
+                            },
+                            {
+                                "codingamerId": 5670673,
+                                "codingamerNickname": "Popeye321",
+                                "codingamerHandle": "0f9a60313020fe0601b576e5ac045ac03760765",
+                                "score": 100,
+                                "duration": 469818,
+                                "status": "STANDARD",
+                                "testSessionStatus": "COMPLETED",
+                                "languageId": "Python3",
+                                "rank": 10,
+                                "position": 18,
+                                "solutionShared": true,
+                                "testSessionHandle": "62690993f78b35a6e6f5beeb45f5d93f668882e0",
+                                "submissionId": 31988544
+                            },
+                            {
+                                "codingamerId": 5645399,
+                                "codingamerNickname": "ImWachxBrokenHeart",
+                                "codingamerHandle": "edbecb86c14cfb51aeeebc25affe34579935465",
+                                "codingamerAvatarId": 110499985733262,
+                                "score": 100,
+                                "duration": 485359,
+                                "status": "STANDARD",
+                                "testSessionStatus": "COMPLETED",
+                                "languageId": "Python3",
+                                "rank": 11,
+                                "position": 7,
+                                "solutionShared": true,
+                                "testSessionHandle": "6269098234cfbf910d822301dfdf6e6d5fb42f59",
+                                "submissionId": 31988547
+                            },
+                            {
+                                "codingamerId": 5663912,
+                                "codingamerNickname": "bugging",
+                                "codingamerHandle": "df2f7e10162a23056f4bf1cad10c165d2193665",
+                                "score": 100,
+                                "duration": 514506,
+                                "status": "STANDARD",
+                                "testSessionStatus": "COMPLETED",
+                                "languageId": "Python3",
+                                "rank": 12,
+                                "position": 13,
+                                "solutionShared": true,
+                                "testSessionHandle": "62690988cf9b214d6fec3f89812a7910a66ceafc",
+                                "submissionId": 31988553
+                            },
+                            {
+                                "codingamerId": 4402273,
+                                "codingamerNickname": "Piammmm",
+                                "codingamerHandle": "04990baed831b9116ce3cafa9cc83ee63722044",
+                                "score": 100,
+                                "duration": 540901,
+                                "status": "STANDARD",
+                                "testSessionStatus": "COMPLETED",
+                                "languageId": "TypeScript",
+                                "rank": 13,
+                                "position": 6,
+                                "solutionShared": true,
+                                "testSessionHandle": "6269098182a2b542f5179ca8bfd8c8c1ed103d41",
+                                "submissionId": 31988559
+                            },
+                            {
+                                "codingamerId": 5673716,
+                                "codingamerNickname": "Rashyy",
+                                "codingamerHandle": "0ae044a6d0db82c954d5d9d3193f46956173765",
+                                "score": 100,
+                                "duration": 554319,
+                                "status": "STANDARD",
+                                "testSessionStatus": "COMPLETED",
+                                "languageId": "Python3",
+                                "rank": 14,
+                                "position": 24,
+                                "solutionShared": false,
+                                "testSessionHandle": "626909997a2841bd4d13699a8152f95cac01b318",
+                                "submissionId": 31988564
+                            },
+                            {
+                                "codingamerId": 5041262,
+                                "codingamerNickname": "SasimaP",
+                                "codingamerHandle": "68033c216c59cf1754503fa1d9a2fa012621405",
+                                "codingamerAvatarId": 110500465988836,
+                                "score": 100,
+                                "duration": 575643,
+                                "status": "STANDARD",
+                                "testSessionStatus": "COMPLETED",
+                                "languageId": "Python3",
+                                "rank": 15,
+                                "position": 22,
+                                "solutionShared": false,
+                                "testSessionHandle": "62690997ca1b815534692c70f1b051aca57618f0",
+                                "submissionId": 31988571
+                            },
+                            {
+                                "codingamerId": 5673690,
+                                "codingamerNickname": "mumu8",
+                                "codingamerHandle": "e80f3c88d30cab9c8344cb8465d16dd50963765",
+                                "codingamerAvatarId": 112116685755238,
+                                "score": 100,
+                                "duration": 611986,
+                                "status": "STANDARD",
+                                "testSessionStatus": "COMPLETED",
+                                "languageId": "Python3",
+                                "rank": 16,
+                                "position": 11,
+                                "solutionShared": false,
+                                "testSessionHandle": "62690986034634b1c508be6b01b62b3c0bebadf0",
+                                "submissionId": 31988574
+                            },
+                            {
+                                "codingamerId": 4511712,
+                                "codingamerNickname": "Noppawut",
+                                "codingamerHandle": "2f4ccf8aed0bda41c0e2fc9bdab129722171154",
+                                "score": 100,
+                                "duration": 633679,
+                                "status": "STANDARD",
+                                "testSessionStatus": "COMPLETED",
+                                "languageId": "Python3",
+                                "rank": 17,
+                                "position": 23,
+                                "solutionShared": false,
+                                "testSessionHandle": "626909988e9e7a18283bc031de2c4b9109cae02a",
+                                "submissionId": 31988582
+                            },
+                            {
+                                "codingamerId": 5673663,
+                                "codingamerNickname": "LemonJuiceTH",
+                                "codingamerHandle": "957e937c810b24e86342b7d73a476d463663765",
+                                "score": 100,
+                                "duration": 660487,
+                                "status": "STANDARD",
+                                "testSessionStatus": "COMPLETED",
+                                "languageId": "Python3",
+                                "rank": 18,
+                                "position": 10,
+                                "solutionShared": true,
+                                "testSessionHandle": "62690985ddf5e2f0c093572196ced2d6c15074ff",
+                                "submissionId": 31988588
+                            },
+                            {
+                                "codingamerId": 5673699,
+                                "codingamerNickname": "T1NNY",
+                                "codingamerHandle": "4aab08b3004ba84f515e84500865485f9963765",
+                                "score": 100,
+                                "duration": 708456,
+                                "status": "STANDARD",
+                                "testSessionStatus": "COMPLETED",
+                                "languageId": "Python3",
+                                "rank": 19,
+                                "position": 20,
+                                "solutionShared": false,
+                                "testSessionHandle": "626909953295498a77d163ac04d917029c65f6ea",
+                                "submissionId": 31988600
+                            },
+                            {
+                                "codingamerId": 5673719,
+                                "codingamerNickname": "myminit",
+                                "codingamerHandle": "847afa3caaa1cdb2b785f17c39979da59173765",
+                                "score": 100,
+                                "duration": 900000,
+                                "status": "STANDARD",
+                                "testSessionStatus": "COMPLETED",
+                                "languageId": "Python3",
+                                "rank": 20,
+                                "position": 2,
+                                "solutionShared": false,
+                                "testSessionHandle": "626909773aef6870471380ed96cf31c27b1cba43",
+                                "submissionId": 31988634
+                            },
+                            {
+                                "codingamerId": 5724278,
+                                "codingamerNickname": "Vetteli",
+                                "codingamerHandle": "efadc381ed58048dc1dcf06d97fd80bb8724275",
+                                "score": 100,
+                                "duration": 900000,
+                                "status": "STANDARD",
+                                "testSessionStatus": "COMPLETED",
+                                "languageId": "C",
+                                "rank": 21,
+                                "position": 4,
+                                "solutionShared": false,
+                                "testSessionHandle": "626909794c61ddc2bfd18d7bc1f0f96b8c68ace7",
+                                "submissionId": 31988629
+                            },
+                            {
+                                "codingamerId": 5563840,
+                                "codingamerNickname": "H4aRu",
+                                "codingamerHandle": "5efface12a3229efe410c4bcca674daf0483655",
+                                "score": 0,
+                                "duration": 900000,
+                                "status": "OWNER",
+                                "testSessionStatus": "COMPLETED",
+                                "languageId": "Python3",
+                                "rank": 22,
+                                "position": 1,
+                                "solutionShared": false,
+                                "testSessionHandle": "6269097642c3b7fed0df36c3738886ca1216f0a9",
+                                "submissionId": 31988623
+                            },
+                            {
+                                "codingamerId": 5673687,
+                                "codingamerNickname": "PPAP01",
+                                "codingamerHandle": "156045c8680b5ce90485e87e0891fecc7863765",
+                                "score": 0,
+                                "duration": 900000,
+                                "status": "STANDARD",
+                                "testSessionStatus": "COMPLETED",
+                                "languageId": "Python3",
+                                "rank": 22,
+                                "position": 12,
+                                "solutionShared": false,
+                                "testSessionHandle": "626909879fc5c08c1a181f6a4101ab4b8cbfce92",
+                                "submissionId": 31988633
+                            },
+                            {
+                                "codingamerId": 5673636,
+                                "codingamerNickname": "OooiooO",
+                                "codingamerHandle": "f5eeca2fb0ec9c2815bdb7377cd50a696363765",
+                                "score": 0,
+                                "duration": 882238,
+                                "status": "STANDARD",
+                                "testSessionStatus": "COMPLETED",
+                                "languageId": "C",
+                                "rank": 22,
+                                "position": 15,
+                                "solutionShared": false,
+                                "testSessionHandle": "62690990889bc06a566fcb939f82c46232c9cf27",
+                                "submissionId": 31988622
+                            },
+                            {
+                                "codingamerId": 5113311,
+                                "codingamerNickname": "EXCEPTIONZ",
+                                "codingamerHandle": "2165c7d2114fcbd61ce3759ccb68b6f41133115",
+                                "score": 0,
+                                "duration": 900000,
+                                "status": "STANDARD",
+                                "testSessionStatus": "COMPLETED",
+                                "languageId": "undefined",
+                                "rank": 22,
+                                "position": 25,
+                                "solutionShared": false,
+                                "testSessionHandle": "6269100047940c6de718dbb4d2ef84e5ecfcb621",
+                                "submissionId": 31988632
+                            }
+                        ],
+                        "programmingLanguages": [
+                            "Bash",
+                            "C",
+                            "C#",
+                            "C++",
+                            "Clojure",
+                            "D",
+                            "Dart",
+                            "F#",
+                            "Go",
+                            "Groovy",
+                            "Haskell",
+                            "Java",
+                            "Javascript",
+                            "Kotlin",
+                            "Lua",
+                            "ObjectiveC",
+                            "OCaml",
+                            "Pascal",
+                            "Perl",
+                            "PHP",
+                            "Python3",
+                            "Ruby",
+                            "Rust",
+                            "Scala",
+                            "Swift",
+                            "TypeScript",
+                            "VB.NET"
+                        ],
+                        "modes": [
+                            "FASTEST"
+                        ],
+                        "type": "PRIVATE"
+                    }
                 ]
             },
             {
                 match_id: "2",
+                match_data: [
+
+                ]
+            }, {
+                match_id: "3",
                 match_data: [
 
                 ]
@@ -1507,26 +1945,23 @@ const products = [
                 match_data: [
 
                 ]
-            }
-        ]
-    },
-    {
-        id: '4',
-        coc_data: [
+            },
             {
-                match_id: "1",
+                match_id: "3",
                 match_data: [
 
                 ]
             },
             {
-                match_id: "2",
+                match_id: "4",
                 match_data: [
 
                 ]
             }
+
+
         ]
-    }
+    },
 ]
 
 app.get('/cocData', (req, res) => {
