@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import NavScore from "../components/NavScore";
 import TableWeely3 from "../components/TableWeely3";
-// import TableWeely4 from "../components/TableWeely4";
+import TableWeely4 from "../components/TableWeely4";
 
 const Weekly = () => {
     const { dateId } = useParams();
@@ -30,6 +30,7 @@ const Weekly = () => {
                         score1: 0,
                         score2: 0,
                         score3: 0,
+                        score4: 0,
                         total: 0
                     }
                 }
@@ -50,11 +51,11 @@ const Weekly = () => {
                 }
                 if (coc.match_id === "4") {
                     parseInt(
-                        top10[playerId].score3 = 100 - (player.rank - 1) * 100 / match.players.length
+                        top10[playerId].score4 = 100 - (player.rank - 1) * 100 / match.players.length
                     )
                 }
                 parseInt(
-                    top10[playerId].total = parseInt(top10[playerId].score1) + parseInt(top10[playerId].score2) + parseInt(top10[playerId].score3)
+                    top10[playerId].total = parseInt(top10[playerId].score1) + parseInt(top10[playerId].score2) + parseInt(top10[playerId].score3 + parseInt(top10[playerId].score4))
                 )
             })
         })
