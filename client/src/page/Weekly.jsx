@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import NavScore from "../components/NavScore";
 import TableWeely3 from "../components/TableWeely3";
-import TableWeely4 from "../components/TableWeely4";
+// import TableWeely4 from "../components/TableWeely4";
 
 const Weekly = () => {
     const { dateId } = useParams();
