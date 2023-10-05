@@ -106,7 +106,7 @@ const Weekly = () => {
                             <table className="text-center w-full h-full bg-black">
                                 <thead className="text-[30px] bg-[#291456] text-white">
                                     {dateId == 3 ? <TableWeely4 /> : <TableWeely3 />}
-                                    {/* <TableWeely3 /> */}
+                                    <TableWeely4 />
                                 </thead>
                                 <tbody className="text-[20px] text-center text-white [&>*:nth-child(2n)]:bg-[#291456] [&>*:nth-child(2n+1)]:bg-[#35246A]">
                                     {dateId == 3 ? ShowTop104 : ShowTop103}
