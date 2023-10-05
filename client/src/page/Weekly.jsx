@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import NavScore from "../components/NavScore";
-
+import TableWeely3 from "../components/TableWeely3";
+import TableWeely4 from "../components/TableWeely4";
 
 const Weekly = () => {
     const { dateId } = useParams();
     const [dataMatch, setDataMatch] = useState([]);
     // let round1 = {}
     // let round2 = {}
-    let top10 = { rank: 0, name: '', score1: 0, score2: 0, score3: 0, total: 0 }
+    let top10 = { rank: 0, name: '', score1: 0, score2: 0, score3: 0, score4: 0, total: 0 }
 
 
 
@@ -47,6 +48,11 @@ const Weekly = () => {
                         top10[playerId].score3 = 100 - (player.rank - 1) * 100 / match.players.length
                     )
                 }
+                if (coc.match_id === "4") {
+                    parseInt(
+                        top10[playerId].score3 = 100 - (player.rank - 1) * 100 / match.players.length
+                    )
+                }
                 parseInt(
                     top10[playerId].total = parseInt(top10[playerId].score1) + parseInt(top10[playerId].score2) + parseInt(top10[playerId].score3)
                 )
@@ -56,16 +62,28 @@ const Weekly = () => {
 
     top10 = Object.values(top10).sort((a, b) => b.total - a.total).slice(0, 10)
 
-    console.log(top10);
 
-    const ShowTop10 = top10?.map((player,index) => {
+    const ShowTop103 = top10?.map((player, index) => {
         return (
             <tr key={player.codingamerId} >
-                <td>{index+1}</td>
+                <td>{index + 1}</td>
                 <td>{player.name}</td>
                 <td>{parseInt(player.score1)}</td>
                 <td>{parseInt(player.score2)}</td>
                 <td>{parseInt(player.score3)}</td>
+                <td>{parseInt(player.total)}</td>
+            </tr>
+        )
+    })
+    const ShowTop104 = top10?.map((player, index) => {
+        return (
+            <tr key={player.codingamerId} >
+                <td>{index + 1}</td>
+                <td>{player.name}</td>
+                <td>{parseInt(player.score1)}</td>
+                <td>{parseInt(player.score2)}</td>
+                <td>{parseInt(player.score3)}</td>
+                <td>{parseInt(player.score4)}</td>
                 <td>{parseInt(player.total)}</td>
             </tr>
         )
@@ -86,17 +104,10 @@ const Weekly = () => {
                         <div className="rounded-3xl w-full h-[500px] py-5 bg-[#291456]">
                             <table className="text-center w-full h-full bg-black">
                                 <thead className="text-[30px] bg-[#291456] text-white">
-                                    <tr>
-                                        <th>Rank</th>
-                                        <th>Name</th>
-                                        <th>Round 1</th>
-                                        <th>Round 2</th>
-                                        <th>Round 3</th>
-                                        <th>Total</th>
-                                    </tr>
+                                    {dateId == 3 ? <TableWeely4 /> : <TableWeely3 />}
                                 </thead>
                                 <tbody className="text-[20px] text-center text-white [&>*:nth-child(2n)]:bg-[#291456] [&>*:nth-child(2n+1)]:bg-[#35246A]">
-                                    {ShowTop10}
+                                    {dateId == 3 ? ShowTop104 : ShowTop103}
                                 </tbody>
                             </table>
                         </div>
