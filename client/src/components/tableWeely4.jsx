@@ -1,5 +1,4 @@
-
-export default function tableWeely4() {
+const TableWeely4 = () => {
     return (
         <>
             <tr>
@@ -14,3 +13,5 @@ export default function tableWeely4() {
         </>
     )
 }
+
+export default TableWeely4
